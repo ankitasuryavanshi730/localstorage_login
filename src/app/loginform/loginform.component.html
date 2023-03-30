@@ -1,0 +1,20 @@
+
+
+
+<div class="container col-lg-4 mx-auto border bg-info p-5 mt-5">
+  <form action="" [formGroup]="formdata" (ngSubmit)="login(formdata.value)">
+
+    <label for="">username:</label>
+    <input type="text" class="form-control" formControlName="email">
+
+    <label for="">password</label>
+    <input type="password" class="form-control" formControlName="password">
+
+    <div class="col-lg-12 mt-5 text-center">
+      <input type="submit" class="btn btn-primary" value="login" [disabled]="formdata.invalid">
+    </div>
+
+    <a routerLink="/register">create new</a>
+
+  </form>
+</div>
